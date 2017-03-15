@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.Objects;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -18,7 +20,14 @@ public class ArrayKatas {
      * @return the sum of the provided array of doubles
      */
     // todo: create sumArray() method
+    public static double sumArray(double[] numbers){
+       double total = 0;
 
+       for(double x: numbers)
+            total += x;
+
+        return total;
+    }
     /**
      * Create a static method named concatenateStrings() that accepts an array
      * of Strings and concentrates them together. The array of String objects is
@@ -31,7 +40,14 @@ public class ArrayKatas {
      * @return a concatenation of the provided array of strings.
      */
     // todo: create concatenateStrings() method
+    public static String concatenateStrings(String[] strings){
+        String empty = "";
+        for(int i =0; i < strings.length; i++){
+            empty = empty + strings[i];
 
+        }
+        return empty;
+    }
     /**
      * Create a static method named reverseArray that accepts an array of
      * Objects. The method should return a new array in the reverse order. For
@@ -52,5 +68,13 @@ public class ArrayKatas {
      * @return an array of objects in reverse order
      */
     // todo: create reverseArray() method
+    public static Object[] reverseArray(Object[] objects){
+        Object[] newObject= new Object[objects.length];
+        int length = objects.length;
+        for(int i = 0; i < objects.length; i++){
+            newObject[i] = objects[(objects.length-1)-i];
 
+        }
+        return newObject;
+    }
 }
